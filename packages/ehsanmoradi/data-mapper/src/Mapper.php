@@ -3,6 +3,7 @@
 namespace EhsanMoradi\DataMapper;
 
 use Illuminate\Support\Arr;
+use Mtownsend\XmlToArray\XmlToArray;
 use EhsanMoradi\DataMapper\exception\MethodNotFoundException;
 
 class Mapper
@@ -13,7 +14,7 @@ class Mapper
 
     public function __construct($data, array $config = null)
     {
-        $this->data = Arr::dot($data);
+        $this->data = $this->convertDataToArray($data);
 
         $this->setConfig($config ?? config('data-mapper.default'));
     }
@@ -33,6 +34,11 @@ class Mapper
     private function convertMethodNameToKey(string $methodName): string
     {
         return $this->config[$methodName] ?? $methodName;
+    }
+    private function convertDataToArray($data):array
+    {
+        $array = xml_to_array($data);
+        return Arr::dot($array);
     }
 
     /**

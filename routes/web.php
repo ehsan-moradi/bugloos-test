@@ -14,4 +14,4 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/xml', [HomeController::class, 'xml'])->name('home.xml');
