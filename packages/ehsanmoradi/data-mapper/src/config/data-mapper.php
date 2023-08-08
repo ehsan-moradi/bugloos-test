@@ -2,9 +2,9 @@
 
 return [
     'default' => [
-        'name'      => 'name',
-        'family'    => 'lastName',
-        'birthDate' => 'birthdayDate',
+        'name'         => 'first_name',
+        'family'       => 'last_name',
+        'birthdayDate' => 'birthday',
     ],
 
     'nested' => [

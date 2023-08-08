@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('xml', [ApiController::class, 'getXmlData']);
+Route::get('json', [ApiController::class, 'getJsonData']);

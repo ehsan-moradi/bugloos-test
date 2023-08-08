@@ -5,6 +5,7 @@ namespace EhsanMoradi\DataMapper;
 use Illuminate\Support\Arr;
 use Mtownsend\XmlToArray\XmlToArray;
 use EhsanMoradi\DataMapper\exception\MethodNotFoundException;
+use function PHPUnit\Framework\isJson;
 
 class Mapper
 {
@@ -12,7 +13,7 @@ class Mapper
 
     private array $config;
 
-    public function __construct($data, array $config = null)
+    public function __construct(string $data, array $config = null)
     {
         $this->data = $this->convertDataToArray($data);
 
@@ -37,7 +38,8 @@ class Mapper
     }
     private function convertDataToArray($data):array
     {
-        $array = xml_to_array($data);
+        $array = $this->isJson($data) ? collect(json_decode($data))->toArray() : xml_to_array($data);
+
         return Arr::dot($array);
     }
 
@@ -53,19 +55,10 @@ class Mapper
         return $this->data[$key];
     }
 
-//    private function getValue(string $key)
-//    {
-//        $keys = explode('.', $key);
-//        $value = $this->data;
-//
-//        foreach ($keys as $k) {
-//            if (isset($value[$k])) {
-//                $value = Str::camel($value[$k]);
-//            } else {
-//                return null;
-//            }
-//        }
-//
-//        return $value;
-//    }
+    private function isJson($string): bool
+    {
+        json_decode($string);
+
+        return json_last_error() === JSON_ERROR_NONE;
+    }
 }

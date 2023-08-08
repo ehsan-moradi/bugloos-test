@@ -15,3 +15,4 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/xml', [HomeController::class, 'xml'])->name('home.xml');
+Route::get('/json', [HomeController::class, 'json'])->name('home.json');

@@ -36,4 +36,20 @@ class HomeController extends Controller
             $mapper->beat(),
         ]);
     }
+
+    public function json()
+    {
+        $data = Http::withoutVerifying()
+            ->get(config('app.url') . '/api/json')
+            ->body()
+        ;
+
+        $mapper = new Mapper($data);
+
+        dd([
+            $mapper->name(),
+            $mapper->family(),
+            $mapper->birthdayDate(),
+        ]);
+    }
 }
