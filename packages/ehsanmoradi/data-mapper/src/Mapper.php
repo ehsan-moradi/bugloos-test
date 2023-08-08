@@ -3,6 +3,7 @@
 namespace EhsanMoradi\DataMapper;
 
 use Illuminate\Support\Arr;
+use EhsanMoradi\DataMapper\exception\MethodNotFoundException;
 
 class Mapper
 {
@@ -34,8 +35,15 @@ class Mapper
         return $this->config[$methodName] ?? $methodName;
     }
 
+    /**
+     * @throws MethodNotFoundException
+     */
     private function getValue(string $key)
     {
+        if (!isset($this->data[$key])){
+            throw new MethodNotFoundException("method \"{$key}\" not found");
+        }
+
         return $this->data[$key];
     }
 
