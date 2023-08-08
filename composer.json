@@ -24,7 +24,8 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "EhsanMoradi\\DataMapper\\": "packages/ehsanmoradi/data-mapper/src"
         }
     },
     "autoload-dev": {
