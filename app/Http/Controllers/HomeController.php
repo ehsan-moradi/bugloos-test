@@ -15,7 +15,7 @@ class HomeController extends Controller
             ->body()
         ;
 
-        $mapper = new Mapper($data, config('data-mapper.nested'));
+        $mapper = new Mapper(data: $data, config: config('data-mapper.nested'));
 
         dd([
             $mapper->plate(),
