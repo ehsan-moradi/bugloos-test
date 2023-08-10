@@ -1,6 +1,6 @@
 <?php
 
-namespace EhsanMoradi\DataMapper\exception;
+namespace EhsanMoradi\DataMapper\Exception;
 
 use Exception;
 use Throwable;

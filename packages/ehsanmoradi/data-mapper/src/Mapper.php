@@ -3,7 +3,7 @@
 namespace EhsanMoradi\DataMapper;
 
 use Illuminate\Support\Arr;
-use EhsanMoradi\DataMapper\exception\MethodNotFoundException;
+use EhsanMoradi\DataMapper\Exception\MethodNotFoundException;
 
 class Mapper
 {

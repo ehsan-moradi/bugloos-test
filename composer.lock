@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a83b3951d88b15de07146bfbb1fe5d75",
+    "content-hash": "d0acb9411bce42e325c50e730cb679fb",
     "packages": [
         {
             "name": "brick/math",
@@ -431,6 +431,54 @@
                 }
             ],
             "time": "2023-01-14T14:17:03+00:00"
+        },
+        {
+            "name": "ehsanmoradi/data-mapper",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ehsan-moradi/data-mapper.git",
+                "reference": "38dadf39b63417a05bcd18cb1b9ed40c0530d900"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ehsan-moradi/data-mapper/zipball/38dadf39b63417a05bcd18cb1b9ed40c0530d900",
+                "reference": "38dadf39b63417a05bcd18cb1b9ed40c0530d900",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0|^10.0",
+                "mtownsend/xml-to-array": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "EhsanMoradi\\DataMapper\\Providers\\MapperServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EhsanMoradi\\DataMapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ehsan moradi",
+                    "email": "ehsanmoradi.a@gmail.com"
+                }
+            ],
+            "description": "data mapper",
+            "support": {
+                "issues": "https://github.com/ehsan-moradi/data-mapper/issues",
+                "source": "https://github.com/ehsan-moradi/data-mapper/tree/v1.0.1"
+            },
+            "time": "2023-08-10T10:44:29+00:00"
         },
         {
             "name": "fruitcake/php-cors",

@@ -159,7 +159,6 @@ return [
         /*
          * Package Service Providers...
          */
-        \EhsanMoradi\DataMapper\serviceProvider\MapperServiceProvider::class,
 
         /*
          * Application Service Providers...
