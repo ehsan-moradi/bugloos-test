@@ -3,9 +3,7 @@
 namespace EhsanMoradi\DataMapper;
 
 use Illuminate\Support\Arr;
-use Mtownsend\XmlToArray\XmlToArray;
 use EhsanMoradi\DataMapper\exception\MethodNotFoundException;
-use function PHPUnit\Framework\isJson;
 
 class Mapper
 {
