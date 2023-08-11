@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function xml()
     {
         $data = Http::withoutVerifying()
-            ->get(config('app.url') . '/api/xml')
+            ->get(route('api.xml'))
             ->body()
         ;
 
@@ -40,7 +40,7 @@ class HomeController extends Controller
     public function json()
     {
         $data = Http::withoutVerifying()
-            ->get(config('app.url') . '/api/json')
+            ->get(route('api.json'))
             ->body()
         ;
 

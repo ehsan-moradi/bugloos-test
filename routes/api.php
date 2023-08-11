@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('xml', [ApiController::class, 'getXmlData']);
-Route::get('json', [ApiController::class, 'getJsonData']);
+Route::get('xml', [ApiController::class, 'getXmlData'])->name('api.xml');
+Route::get('json', [ApiController::class, 'getJsonData'])->name('api.json');
