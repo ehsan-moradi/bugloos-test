@@ -5,6 +5,7 @@ return [
         'name'         => 'first_name',
         'family'       => 'last_name',
         'birthdayDate' => 'birthday',
+        'address' => 'info.address'
     ],
 
     'nested' => [

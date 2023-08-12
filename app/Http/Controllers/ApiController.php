@@ -38,6 +38,9 @@ class ApiController extends Controller
             'first_name' => 'Ehsan',
             'last_name'  => 'Moradi',
             'birthday'   => '1994',
+            'info' => [
+                'address' => 'doroud'
+            ]
         ]);
     }
 }

@@ -50,6 +50,7 @@ class HomeController extends Controller
             $mapper->name(),
             $mapper->family(),
             $mapper->birthdayDate(),
+            $mapper->address()
         ]);
     }
 }
